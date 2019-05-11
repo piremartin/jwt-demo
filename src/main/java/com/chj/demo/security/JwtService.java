@@ -39,9 +39,9 @@ public class JwtService {
             //todo
             Jwts.parser().setSigningKey(secretKey).parseClaimsJws(jwt);
 //            .getBody().getSubject();
-            return true;
         } catch (Throwable e) {
             return false;
         }
+        return true;
     }
 }
