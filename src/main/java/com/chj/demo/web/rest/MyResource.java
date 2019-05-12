@@ -17,6 +17,6 @@ public class MyResource {
 
     @GetMapping("/hello")
     public ResponseEntity hello(){
-        return ResponseEntity.ok(LocalDateTime.now());
+        return ResponseEntity.ok("time is "+LocalDateTime.now());
     }
 }

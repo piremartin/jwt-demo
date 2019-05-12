@@ -15,6 +15,9 @@ import java.util.Date;
 @Component
 public class JwtService {
 
+    /**
+     * 过期时间30天 2592000L
+     */
     private static final Long expireSeconds = 60L;
     private static final SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS512);
 
