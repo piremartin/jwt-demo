@@ -22,12 +22,12 @@ public class JwtService {
     private static final SecretKey secretKey = Keys.secretKeyFor(SignatureAlgorithm.HS512);
 
     public String generateToken(String payload) {
-        String compact = Jwts.builder()
+        String jwt = Jwts.builder()
                 .setSubject(payload)
                 .setExpiration(new Date(System.currentTimeMillis() + expireSeconds * 1000))
                 .signWith(secretKey, SignatureAlgorithm.HS512)
                 .compact();
-        return "Bearer " + compact;
+        return "Bearer " + jwt;
     }
 
 
